@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input/>
+    <button>Compare com o meu segredo</button>
+    
+    <script>
+       function pulaLinha(){
+    document.write("<br><br>");
+}
+function mostra(frase){
+    document.write(frase);
+}
+
+let login = "alex";
+let senha = "123";
+
+let loginInformado = prompt("Informe o nome do usuário: ");
+let senhaInformada = prompt("Informe a senha do usuário" + loginInformado);
+tentativas = 3;
+loginCerto = 1;
+while(loginCerto <= tentativas){
+if (loginInformado == login && senhaInformada == senha){
+mostra  ("Bem vindo ao Sistema " + loginInformado);
+    loginCerto = tentativas;
+} else {
+    if (tentativas == 3){
+        mostra("Número permitido de tentativas ultrapassado!");
+    } else{
+    mostra("Login incorreto, tente novamente");
+    }
+}
+loginCerto = tentativas + 1;
+}
+    
+</script>
+
+</body>
+</html>
